@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+  justify-content: space-evenly;
+}
+.example-card {
+  max-width: 200px;
+}
+div{
+    background-color:coral;
+}
