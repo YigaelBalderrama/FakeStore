@@ -1,0 +1,37 @@
+<div class="row">
+  <div id="generator" class="col-md-4 col-sm-6 align-items-center" *ngFor="let product of productos">
+    <div class="card internelement">
+      <mat-card>
+        <mat-card-header>
+          <div mat-card-avatar class="header-image"></div>
+          <mat-card-title>{{ product.title | slice: 0:25}}</mat-card-title>
+          <mat-card-subtitle>{{ product.price | currency:'USD' }}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="product.image" alt="product.title" />
+        <mat-card-content>
+          <p>
+            {{ product.description | slice: 0:400 }}
+          </p>
+        </mat-card-content>
+        <mat-card-actions class="buttons">
+          <button
+            mat-raised-button
+            mat-button
+            (click)="openSnackBar('Like')"
+            color="primary"
+          >
+            LIKE
+          </button>
+          <button
+            mat-raised-button
+            mat-button
+            (click)="openSnackBar('Dislike')"
+            color="warn"
+          >
+            DISLIKE
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>

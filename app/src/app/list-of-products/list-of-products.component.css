@@ -1,0 +1,13 @@
+  .card {
+    max-width: 400px;
+    min-height: 200px;
+  }
+
+  .interelement{
+    align-items: stretch;
+    align-content: stretch;
+  }
+  .header-image{
+    background-image: url("https://fakestoreapi.com/icons/logo.png");
+    background-size: contain;
+  }
